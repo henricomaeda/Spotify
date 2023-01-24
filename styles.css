@@ -1,0 +1,167 @@
+body, input, span, a {
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-user-select: none;
+    background-color: unset;
+    letter-spacing: 0.026vh;
+    -ms-user-select: none;
+    text-decoration: none;
+    user-select: none;
+    font-weight: bold;
+    font-size: 2.3vh;
+    color: #ffffff;
+    border: 0;
+    margin: 0;
+}
+div.navigator {
+    height: 100%;
+    padding: 4vh;
+    width: 32.4vh;
+    position: fixed;
+    background-color: #000000;
+}
+a.logo {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+}
+a.logo img {
+    width: 6vh;
+    height: 6.2vh;
+    filter: brightness(0) invert(1);
+}
+a.logo span {
+    padding: 0.8vh;
+    font-size: 4vh;
+}
+div.header {
+    right: 0vh;
+    height: 10vh;
+    display: flex;
+    position: fixed;
+    width: calc(100% - 45.6vh);
+    padding: 0vh 2.6vh 0vh 2.6vh;
+    background-color: #00000062;
+}
+div.header .left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+div.left button i {color: #8b8b8b}
+div.left button {
+    font-size: 3.6vh;
+    margin-right: 2vh;
+    cursor: not-allowed;
+    border-radius: 100%;
+    background-color: #090909;
+    padding: 0px 1.2vh 0px 1.2vh;
+}
+div.header .right {
+    flex: 0;
+    display: flex;
+    align-items: center;
+}
+div.header .button:hover {
+    width: 17.6vh;
+    font-size: 2.5vh;
+}
+div.header .button {
+    width: 17vh;
+    color: #000000;
+    text-align: center;
+    border-radius: 20vh;
+    margin: 0vh 0.2vh 0vh 0.2vh;
+    background-color: #ffffff;
+    padding: 2.6vh 0vh 2.2vh 0vh;
+    transition: font-size 200ms, width 200ms;
+}
+div.header .subbutton:hover {
+    color: #ffffff;
+    font-size: 2.56vh;
+}
+div.header .subbutton {
+    width: 24vh;
+    color: #8b8b8b;
+    font-size: 2.42vh;
+    text-align: center;
+    padding: 2vh 0vh 2vh 0vh;
+    transition: color 200ms, font-size 200ms;
+}
+div.main {
+    padding: 14.2vh 2.6vh 0vh 43.2vh;
+    min-height: calc(100vh - 14.2vh);
+    background-image: linear-gradient(to bottom, #1f1f1f, #121212);
+}
+div.main .container {
+    display: flex;
+    margin-bottom: 3.36vh;
+    align-items: center;
+    justify-content: space-between;
+}
+div.main .container .title {font-size: 3.2vh}
+div.main .container .subtitle::after {background-color: #a8a8a8}
+div.main .container .subtitle {
+    cursor: pointer;
+    color: #a8a8a8;
+    font-size: 2.26vh;
+}
+div.main .content {
+    display: flex;
+    justify-content: space-between;
+}
+div.content .item {
+    width: 30vh;
+    padding: 2.2vh;
+    border-radius: 0.92vh;
+    background-image: linear-gradient(to top, #1f1f1f, #121212);
+}
+div.content .item div.img {
+    width: 30vh;
+    height: 30vh;
+    border-radius: 1.2vh;
+    background-color: #000000;
+}
+div.content .item .title {
+    padding: 0vh;
+    display: block;
+    margin-top: 2.6vh;
+}
+div.content .item .subtitle {
+    padding: 0vh;
+    line-clamp: 2;
+    display: block;
+    overflow: hidden;
+    color: #a8a8a8;
+    margin-top: 1.26vh;
+    font-weight: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+}
+
+/* Underline animation */
+.underline {display: inline-block; position: relative}
+.underline:hover {
+    border-width: 1px;
+    border-bottom: 1px;
+    border-color: white;
+}
+
+.underline:after {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    content: '';
+    position: absolute;
+    transform: scaleX(0);
+    background-color: #ffffff;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+  
+.underline:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
