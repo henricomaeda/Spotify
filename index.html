@@ -7,65 +7,18 @@
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="./styles.css">
     <link rel="icon" href="./assets/icon.png">
-    <script src="scripts.js"></script>
+    <script src="./scripts.js"></script>
     <title>Spotify</title>
     <script
         src="https://code.jquery.com/jquery-3.3.1.js"
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous">
     </script>
-</head>
 <body onload="fetchData()" oncopy="return false" oncut="return false">
-    <div class="navigator">
-        <a class="logo" href="./">
-            <img src="./assets/icon.png">
-            <span>Spotify</span>
-        </a>
-    </div>
-    <div class="header">
-        <div class="left">
-            <button id="previous" title="Página anterior" onclick="history.back()">
-                <i class='fas fa-angle-left'></i>
-            </button>
-            <button id="next" title="Próxima página" onclick="history.forward()">
-                <i class='fas fa-angle-right'></i>
-            </button>
-        </div>
-        <div class="right">
-            <form method="post" action="./signup.html">
-                <input type="submit" class="subbutton" value="Inscrever-se" />
-            </form>
-            <form method="post" action="./login.html">
-                <input type="submit" class="button" value="Entrar" />
-            </form>
-        </div>
-    </div>
+    <div class="navigator"></div>
+    <div class="header"></div>
     <div class="main">
-        <div class="container">
-            <a class="title underline">
-                Em alta
-            </a>
-            <a class="subtitle underline" onclick="alert('Mostrando tudo')">
-                MOSTRAR TUDO
-            </a>
-        </div>
-        <div class="content">
-            <div class="item">
-                <div class="img"></div>
-                <input type="text" class="title" />
-                <input type="text" class="subtitle" />
-            </div>
-            <div class="item">
-                <div class="img"></div>
-                <input type="text" class="title" />
-                <input type="text" class="subtitle" />
-            </div>
-            <div class="item">
-                <div class="img"></div>
-                <input type="text" class="title" />
-                <input type="text" class="subtitle" />
-            </div>
-        </div>
+        <div class="highlight"></div>
     </div>
 </body>
 </html>

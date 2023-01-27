@@ -1,17 +1,38 @@
 document.addEventListener('contextmenu', event => event.preventDefault());
 const fetchData = () => {
-    if (history.length > 1) document.getElementById("previous").style.cursor = "pointer";
-    if (history.length > 1) document.getElementById("next").style.cursor = "pointer";
+    $(".header").load("./components/header.html");
+    $(".navigator").load("./components/navigator.html");
+    $(".highlight").load("./components/highlight.html");
+}
 
-    // <div class="header"></div>
-    $(".header").load("header.html");
-    $(".footer").load("footer.html");
+const fetchHighlight = () => {
+    var images = document.querySelectorAll('.highlight .content .img'),
+    titles = document.querySelectorAll('.highlight .content .title'),
+    subtitles = document.querySelectorAll('.highlight .content .subtitle');
 
-    document.querySelectorAll('.content .item .title')[0].value = 'Título 1';
-    document.querySelectorAll('.content .item .title')[1].value = 'Título 2';
-    document.querySelectorAll('.content .item .title')[2].value = 'Título 3';
-    
-    document.querySelectorAll('.content .item .subtitle')[0].value = 'SubTítulo 1';
-    document.querySelectorAll('.content .item .subtitle')[1].value = 'SubTítulo 2';
-    document.querySelectorAll('.content .item .subtitle')[2].value = 'SubTítulo 3';
+    const addCard = (n, t = '', s = '', i) => {
+        titles[n].innerHTML = t;
+        subtitles[n].innerHTML = s;
+
+        const path = "./assets/" + i;
+        $.ajax({
+            url: path,
+            type: 'HEAD',
+            success: () => images[n].style.backgroundImage = "url('" + path + "')"
+        });
+    }
+
+    for (var i = 0; i < titles.length; i++) {
+        if (i == 0) addCard(i, "Peaceful Piano", "Relax and indulge with beautiful piano pieces", "icon.png");
+        else if (i == 1) addCard(i, "Deep Focus", "Keep calm and focus with ambient and post-rock music.");
+        else addCard(i);
+    }
+}
+
+const repeat = (times, content, path) => {
+    var panel = $(content).clone();
+    for (i = 0; i < times; i++) {
+        var new_panel = panel.clone();
+        $(path).append(new_panel);
+    }
 }

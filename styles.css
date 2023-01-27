@@ -12,59 +12,69 @@ body, input, span, a {
     border: 0;
     margin: 0;
 }
+
 div.navigator {
+    width: 32vh;
     height: 100%;
     padding: 4vh;
-    width: 32.4vh;
     position: fixed;
     background-color: #000000;
 }
+
 a.logo {
     display: flex;
     cursor: pointer;
     align-items: center;
 }
+
 a.logo img {
     width: 6vh;
-    height: 6.2vh;
+    height: 6vh;
     filter: brightness(0) invert(1);
 }
+
 a.logo span {
     padding: 0.8vh;
-    font-size: 4vh;
+    font-size: 3.6vh;
 }
+
 div.header {
     right: 0vh;
     height: 10vh;
     display: flex;
     position: fixed;
-    width: calc(100% - 45.6vh);
+    width: calc(100% - 45.2vh);
     padding: 0vh 2.6vh 0vh 2.6vh;
     background-color: #00000062;
 }
+
 div.header .left {
     flex: 1;
     display: flex;
     align-items: center;
 }
+
 div.left button i {color: #8b8b8b}
 div.left button {
+    border: 0;
     font-size: 3.6vh;
     margin-right: 2vh;
-    cursor: not-allowed;
     border-radius: 100%;
     background-color: #090909;
-    padding: 0px 1.2vh 0px 1.2vh;
+    padding: 0.6vh 1.6vh 0.4vh 1.6vh;
 }
+
 div.header .right {
     flex: 0;
     display: flex;
     align-items: center;
 }
+
 div.header .button:hover {
     width: 17.6vh;
     font-size: 2.5vh;
 }
+
 div.header .button {
     width: 17vh;
     color: #000000;
@@ -75,10 +85,12 @@ div.header .button {
     padding: 2.6vh 0vh 2.2vh 0vh;
     transition: font-size 200ms, width 200ms;
 }
+
 div.header .subbutton:hover {
     color: #ffffff;
     font-size: 2.56vh;
 }
+
 div.header .subbutton {
     width: 24vh;
     color: #8b8b8b;
@@ -87,51 +99,67 @@ div.header .subbutton {
     padding: 2vh 0vh 2vh 0vh;
     transition: color 200ms, font-size 200ms;
 }
+
 div.main {
-    padding: 14.2vh 2.6vh 0vh 43.2vh;
-    min-height: calc(100vh - 14.2vh);
+    padding: 13.2vh 2.6vh 0vh 42.6vh;
+    min-height: calc(100vh - 13.2vh);
     background-image: linear-gradient(to bottom, #1f1f1f, #121212);
 }
+
 div.main .container {
     display: flex;
-    margin-bottom: 3.36vh;
-    align-items: center;
+    margin-bottom: 3.6vh;
+    align-items: flex-end;
     justify-content: space-between;
 }
-div.main .container .title {font-size: 3.2vh}
+
+div.main .container .title {font-size: 3.2vh; cursor: pointer}
 div.main .container .subtitle::after {background-color: #a8a8a8}
 div.main .container .subtitle {
     cursor: pointer;
     color: #a8a8a8;
     font-size: 2.26vh;
 }
+
 div.main .content {
     display: flex;
+    margin-bottom: 5.2vh;
     justify-content: space-between;
 }
+
 div.content .item {
     width: 30vh;
-    padding: 2.2vh;
+    padding: 2vh;
     border-radius: 0.92vh;
     background-image: linear-gradient(to top, #1f1f1f, #121212);
 }
+
 div.content .item div.img {
     width: 30vh;
     height: 30vh;
     border-radius: 1.2vh;
-    background-color: #000000;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 0.8vh 2.2vh #00000080;
+    -webkit-box-shadow: 0 0.8vh 2.2vh #00000080;
+    background-image: linear-gradient(to top, #1f1f1f, #121212);
 }
+
 div.content .item .title {
     padding: 0vh;
     display: block;
-    margin-top: 2.6vh;
+    margin-top: 3.6vh;
 }
+
 div.content .item .subtitle {
     padding: 0vh;
     line-clamp: 2;
     display: block;
-    overflow: hidden;
     color: #a8a8a8;
+    overflow: hidden;
+    font-size: 2.3vh;
+    line-height: 4vh;
     margin-top: 1.26vh;
     font-weight: normal;
     display: -webkit-box;
@@ -164,4 +192,21 @@ div.content .item .subtitle {
 .underline:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
+}
+
+/* Scrollbar */
+html {
+    overflow-x: hidden;
+    overflow-y: overlay;
+}
+
+::-webkit-scrollbar {
+    width: 2vh;
+    background: none;
+}
+
+::-webkit-scrollbar-thumb:hover {background: #ffffff6b}
+::-webkit-scrollbar-thumb {
+    border-color: none;
+    background: #ffffff4d;
 }

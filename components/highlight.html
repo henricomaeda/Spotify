@@ -1,0 +1,19 @@
+<div class="container">
+    <a class="title underline" onclick="alert('Mostrando tudo')">
+        Em alta
+    </a>
+    <a class="subtitle underline" onclick="alert('Mostrando tudo')">
+        MOSTRAR TUDO
+    </a>
+</div>
+<div class="content">
+    <div class="item">
+        <div class="img"></div>
+        <span type="text" class="title"></span>
+        <span type="text" class="subtitle"></span>
+    </div>
+</div>
+<script>
+    repeat(2, ".highlight .content .item", ".highlight .content");
+    fetchHighlight();
+</script>
