@@ -8,17 +8,19 @@
     <link rel="stylesheet" href="./styles.css">
     <link rel="icon" href="./assets/icon.png">
     <script src="./scripts.js"></script>
-    <title>Spotify</title>
+    <title>Spotify – Web player</title>
     <script
         src="https://code.jquery.com/jquery-3.3.1.js"
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous">
     </script>
+</head>
 <body onload="fetchData()" oncopy="return false" oncut="return false">
     <div class="navigator"></div>
     <div class="header"></div>
     <div class="main">
-        <div class="highlight"></div>
+        <div class="component" name="Em alta" search="highlight"></div>
+        <div class="component" name="Spotify Playlists" search="playlists"></div>
     </div>
 </body>
 </html>

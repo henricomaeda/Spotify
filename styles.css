@@ -1,3 +1,7 @@
+body {
+    min-height: calc(100vh);
+    background-image: linear-gradient(to bottom, #1f1f1f, #121212);
+}
 body, input, span, a {
     font-family: Arial, Helvetica, sans-serif;
     -webkit-user-select: none;
@@ -39,13 +43,14 @@ a.logo span {
 }
 
 div.header {
+    z-index: 1;
     right: 0vh;
     height: 10vh;
     display: flex;
     position: fixed;
     width: calc(100% - 45.2vh);
     padding: 0vh 2.6vh 0vh 2.6vh;
-    background-color: #00000062;
+    background-color: rgba(0, 0, 0, 0.384);
 }
 
 div.header .left {
@@ -83,7 +88,7 @@ div.header .button {
     margin: 0vh 0.2vh 0vh 0.2vh;
     background-color: #ffffff;
     padding: 2.6vh 0vh 2.2vh 0vh;
-    transition: font-size 200ms, width 200ms;
+    transition: font-size 120ms, width 120ms;
 }
 
 div.header .subbutton:hover {
@@ -97,15 +102,10 @@ div.header .subbutton {
     font-size: 2.42vh;
     text-align: center;
     padding: 2vh 0vh 2vh 0vh;
-    transition: color 200ms, font-size 200ms;
+    transition: color 120ms, font-size 120ms;
 }
 
-div.main {
-    padding: 13.2vh 2.6vh 0vh 42.6vh;
-    min-height: calc(100vh - 13.2vh);
-    background-image: linear-gradient(to bottom, #1f1f1f, #121212);
-}
-
+div.main {padding: 13.2vh 2.6vh 0vh 42.6vh}
 div.main .container {
     display: flex;
     margin-bottom: 3.6vh;
@@ -127,16 +127,50 @@ div.main .content {
     justify-content: space-between;
 }
 
+div.content .item:hover {background-image: linear-gradient(to top, #242424, #242424)}
 div.content .item {
     width: 30vh;
-    padding: 2vh;
+    padding: 2.2vh;
+    cursor: pointer;
     border-radius: 0.92vh;
     background-image: linear-gradient(to top, #1f1f1f, #121212);
 }
 
+div.content .item .play:hover {
+    right: 0.8vh;
+    bottom: 0.9vh;
+    background-color: #24e76c;
+    padding: 2.7vh 2.6vh 2.3vh 2.7vh;
+}
+
+div.content .item:hover .play {opacity: 1}
+div.content .item .play {
+    opacity: 0;
+    right: 1vh;
+    bottom: 1vh;
+    cursor:default;
+    position: absolute;
+    border-radius: 100%;
+    background-color: #1fdf64;
+    padding: 2.6vh 2.5vh 2.2vh 2.6vh;
+}
+
+div.content .item .play:hover i {
+    font-size: 2.8vh;
+    margin: 0 0 0.2vh 0.42vh;
+}
+
+div.content .item .play i {
+    font-size: 2.6vh;
+    color: #000000;
+    margin: 0 0 0 0.32vh;
+}
+
 div.content .item div.img {
-    width: 30vh;
-    height: 30vh;
+    margin: 0 auto;
+    width: 29.6vh;
+    height: 29.6vh;
+    position: relative;
     border-radius: 1.2vh;
     background-size: cover;
     background-position: center;
@@ -195,11 +229,7 @@ div.content .item .subtitle {
 }
 
 /* Scrollbar */
-html {
-    overflow-x: hidden;
-    overflow-y: overlay;
-}
-
+html {overflow: hidden}
 ::-webkit-scrollbar {
     width: 2vh;
     background: none;
