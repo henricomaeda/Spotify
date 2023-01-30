@@ -19,27 +19,79 @@ body, input, span, a {
 
 div.navigator {
     width: 32vh;
-    height: 100%;
+    height: 77%;
     padding: 4vh;
     position: fixed;
     background-color: #000000;
 }
 
-a.logo {
+div.navigator a.logo {
     display: flex;
     cursor: pointer;
     align-items: center;
 }
 
-a.logo img {
+div.navigator a.logo img {
     width: 6vh;
     height: 6vh;
     filter: brightness(0) invert(1);
 }
 
-a.logo span {
+div.navigator a.logo span {
     padding: 0.8vh;
     font-size: 3.6vh;
+}
+
+div.navigator .container {margin-top: 6vh}
+div.navigator .container .item {
+    display: flex;
+    cursor: pointer;
+    margin-top: 2.6vh;
+    align-items: center;
+}
+
+div.navigator .container .item span.selected,
+div.navigator .container .item:hover span {color: #ffffff}
+div.navigator .container .item span {
+    color: #a3a3a3;
+    font-size: 2.2vh;
+}
+
+div.navigator .container .item i.selected,
+div.navigator .container .item:hover i {color: #ffffff}
+div.navigator .container .item i {
+    width: 6.26vh;
+    color: #a8a8a8;
+    font-size: 3.6vh;
+}
+
+div.navigator .container i.new {
+    width: 7vh;
+    font-size: 5vh;
+    margin-left: -0.86vh;
+}
+
+div.navigator .container .item:hover .liked {
+    background-image: linear-gradient(120deg, #501df3, #bce0da);
+}
+
+div.navigator .container .item .liked {
+    width: 3.6vh;
+    height: 3.6vh;
+    position: relative;
+    border-radius: 0.2vh;
+    margin-right: 2.62vh;
+    background-image: linear-gradient(120deg, #3a17a9, #839d99);
+}
+
+div.navigator .container .item .liked i {
+    top: 50%;
+    margin: 0;
+    left: 100%;
+    font-size: 1.82vh;
+    position: absolute;
+    margin-left: 0.326vh;
+    transform: translate(-50%, -50%);
 }
 
 div.header {
@@ -75,12 +127,20 @@ div.header .right {
     align-items: center;
 }
 
+div.header .right .verticalLine {
+    width: 0.2vh;
+    height: 3.72vh;
+    background-color: #ffffff;
+    margin: 0vh 1.62vh 0vh 1.62vh;
+}
+
 div.header .button:hover {
     width: 17.6vh;
     font-size: 2.5vh;
 }
 
-div.header .button {
+div.header .button,
+a.footer .button {
     width: 17vh;
     color: #000000;
     text-align: center;
@@ -93,19 +153,59 @@ div.header .button {
 
 div.header .subbutton:hover {
     color: #ffffff;
-    font-size: 2.56vh;
+    font-size: 2.72vh;
 }
 
 div.header .subbutton {
     width: 24vh;
     color: #8b8b8b;
-    font-size: 2.42vh;
+    font-size: 2.44vh;
     text-align: center;
     padding: 2vh 0vh 2vh 0vh;
     transition: color 120ms, font-size 120ms;
 }
 
-div.main {padding: 13.2vh 2.6vh 0vh 42.6vh}
+div.header .dl {width: 16vh; letter-spacing: 0.2vh}
+a.footer {
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    padding: 1.6vh 2vh 2vh 2.6vh;
+    background-image: linear-gradient(90deg, #af2896, #509bf5);
+}
+
+a.footer div {
+    flex: 1;
+}
+
+a.footer form {
+    display: flex;
+    align-items: center;
+}
+
+a.footer .title {
+    font-size: 1.9vh;
+    font-weight: normal;
+    letter-spacing: 0.3vh;
+}
+
+a.footer .subtitle {
+    width: 118vh;
+    display: block;
+    margin-top: 0.6vh;
+    font-size: 2.5vh;
+    line-height: 3.6vh;
+    text-align: justify;
+    font-weight: normal;
+    letter-spacing: 0.1vh;
+}
+
+a.footer input.button {
+    width: 30vh;
+    margin: 2vh 6vh 2vh 6vh;
+}
+
+div.main {padding: 13.2vh 2.6vh 12.6vh 42.6vh}
 div.main .container {
     display: flex;
     margin-bottom: 3.6vh;

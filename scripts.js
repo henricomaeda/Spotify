@@ -62,6 +62,7 @@ const loadDatabase = () => {
 
 const fetchData = async () => {
     $(".header").load("./components/header.html");
+    $(".footer").load("./components/footer.html");
     $(".navigator").load("./components/navigator.html");
     $("body .main .component").load("./components/component.html");
 
